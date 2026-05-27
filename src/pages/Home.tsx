@@ -138,11 +138,11 @@ const Home = () => {
       />
 
       <main className="mx-auto max-w-7xl px-5 pb-24 pt-10 sm:px-6 lg:px-8">
-        <div className="grid gap-8 xl:grid-cols-[1.28fr_0.72fr]">
+        <div className="grid gap-8">
           <section className="relative overflow-hidden rounded-[44px] border border-[rgba(255,255,255,0.88)] bg-[var(--surface)]/96 p-8 shadow-[0_40px_120px_-80px_rgba(183,152,145,0.45)] backdrop-blur-xl dark:border-[rgba(255,255,255,0.08)] dark:bg-[var(--panel)]/96">
             <div className="pointer-events-none absolute -left-16 top-8 h-56 w-56 rounded-full bg-[#DCC6E0]/40 blur-3xl" />
             <div className="pointer-events-none absolute right-0 top-1/2 h-72 w-72 rounded-full bg-[#F3C5B5]/30 blur-3xl" />
-            <div className="relative grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div className="grid gap-8">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-3 rounded-full bg-[#fff3ee] px-4 py-2 text-xs uppercase tracking-[0.45em] text-[#9d6b7a] shadow-sm shadow-[#d8a7b1]/20 dark:bg-[#2b3347]/85 dark:text-[#dcc6e0]">
                   Editorial boutique
@@ -170,7 +170,7 @@ const Home = () => {
               </div>
 
               <div className="rounded-[32px] border border-[rgba(255,255,255,0.85)] bg-white/90 p-6 shadow-[0_24px_65px_-45px_rgba(183,152,145,0.3)] dark:border-[rgba(255,255,255,0.08)] dark:bg-[rgba(23,31,46,0.9)]">
-                <div className="flex items-center justify-between gap-4 rounded-[28px] bg-[#f7e8e2] p-5 shadow-sm dark:bg-[#2a2f42]/90">
+                <div className="flex flex-col gap-4 rounded-[28px] bg-[#f7e8e2] p-5 shadow-sm dark:bg-[#2a2f42]/90 sm:flex-row sm:items-center sm:justify-between">
                   <div>
                     <p className="text-xs uppercase tracking-[0.35em] text-[#9d6b7a]">Today’s edit</p>
                     <p className="mt-3 text-2xl font-semibold text-[#39232b] dark:text-[#f7f3ef]">Perfectly balanced ensembles</p>
@@ -187,39 +187,37 @@ const Home = () => {
             </div>
           </section>
 
-          <aside className="space-y-6">
-            <Filters
-              categories={categories}
-              activeCategory={activeCategory}
-              onCategoryChange={setActiveCategory}
-              sortMethod={sortMethod}
-              onSortChange={setSortMethod}
-            />
+          <Filters
+            categories={categories}
+            activeCategory={activeCategory}
+            onCategoryChange={setActiveCategory}
+            sortMethod={sortMethod}
+            onSortChange={setSortMethod}
+          />
 
-            <div className="rounded-[40px] border border-[rgba(255,255,255,0.9)] bg-[var(--surface)]/96 p-6 shadow-[0_28px_90px_-70px_rgba(183,152,145,0.35)] dark:border-[rgba(255,255,255,0.08)] dark:bg-[var(--panel)]/96">
-              <p className="text-sm uppercase tracking-[0.35em] text-[#9d6b7a] dark:text-[#dcc6e0]">Recently viewed</p>
-              <div className="mt-5 space-y-4">
-                {recentlyViewed.length ? (
-                  recentlyViewed.map((product) => (
-                    <button
-                      key={product.id}
-                      type="button"
-                      onClick={() => handleQuickView(product)}
-                      className="w-full rounded-[28px] border border-[#f0d9d3] bg-[#fff4ef]/90 p-4 text-left transition hover:border-[#d8a7b1] hover:bg-[#fff2ec]/90 dark:border-[#3c4458]/70 dark:bg-[#1f293b]/90 dark:hover:border-[#d98f89]"
-                    >
-                      <div className="flex items-center justify-between gap-4 text-sm text-[#5c4146] dark:text-[#f7f3ef]">
-                        <span>{product.title}</span>
-                        <span className="font-semibold text-[#9d6b7a] dark:text-[#dcc6e0]">{formatCurrency(product.price)}</span>
-                      </div>
-                      <p className="mt-2 text-xs leading-5 text-[#8c6f75] dark:text-[#9aa9bf]">{product.category}</p>
-                    </button>
-                  ))
-                ) : (
-                  <p className="text-sm leading-6 text-[#6b5152] dark:text-[#c1b8c5]">Quick view a product to save an inspiration list.</p>
-                )}
-              </div>
+          <div className="rounded-[40px] border border-[rgba(255,255,255,0.9)] bg-[var(--surface)]/96 p-6 shadow-[0_28px_90px_-70px_rgba(183,152,145,0.35)] dark:border-[rgba(255,255,255,0.08)] dark:bg-[var(--panel)]/96">
+            <p className="text-sm uppercase tracking-[0.35em] text-[#9d6b7a] dark:text-[#dcc6e0]">Recently viewed</p>
+            <div className="mt-5 space-y-4">
+              {recentlyViewed.length ? (
+                recentlyViewed.map((product) => (
+                  <button
+                    key={product.id}
+                    type="button"
+                    onClick={() => handleQuickView(product)}
+                    className="w-full rounded-[28px] border border-[#f0d9d3] bg-[#fff4ef]/90 p-4 text-left transition hover:border-[#d8a7b1] hover:bg-[#fff2ec]/90 dark:border-[#3c4458]/70 dark:bg-[#1f293b]/90 dark:hover:border-[#d98f89]"
+                  >
+                    <div className="flex items-center justify-between gap-4 text-sm text-[#5c4146] dark:text-[#f7f3ef]">
+                      <span>{product.title}</span>
+                      <span className="font-semibold text-[#9d6b7a] dark:text-[#dcc6e0]">{formatCurrency(product.price)}</span>
+                    </div>
+                    <p className="mt-2 text-xs leading-5 text-[#8c6f75] dark:text-[#9aa9bf]">{product.category}</p>
+                  </button>
+                ))
+              ) : (
+                <p className="text-sm leading-6 text-[#6b5152] dark:text-[#c1b8c5]">Quick view a product to save an inspiration list.</p>
+              )}
             </div>
-          </aside>
+          </div>
         </div>
 
         <section className="mt-12 space-y-6">

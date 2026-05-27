@@ -37,13 +37,13 @@ const Filters = ({ categories, activeCategory, onCategoryChange, sortMethod, onS
           })}
         </div>
 
-        <div className="flex min-w-[220px] items-center gap-3 rounded-3xl border border-[#e8d5d2] bg-[#fff7f2]/90 px-4 py-3 text-sm text-[#6b5152] shadow-sm dark:border-[#3c4458]/70 dark:bg-[#1f293b]/90 dark:text-[#c1b8c5]">
+        <div className="flex flex-nowrap items-center gap-3 rounded-3xl border border-[#e8d5d2] bg-[#fff7f2]/90 px-4 py-3 text-sm text-[#6b5152] shadow-sm dark:border-[#3c4458]/70 dark:bg-[#1f293b]/90 dark:text-[#c1b8c5]">
           <SlidersHorizontal className="h-4 w-4 text-[#c97c5d]" />
           <span className="font-medium text-[#9d6b7a] dark:text-[#dcc6e0]">Sort by</span>
           <select
             value={sortMethod}
             onChange={(event) => onSortChange(event.target.value)}
-            className="w-full bg-transparent text-sm outline-none dark:text-[#f7f3ef]"
+            className="max-w-[160px] flex-shrink rounded-full border border-transparent bg-transparent px-2 py-1 text-sm outline-none dark:text-[#f7f3ef]"
           >
             {sortOptions.map((option) => (
               <option key={option.value} value={option.value}>
