@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Heart, Moon, Search, ShoppingBag, Sparkles, Sun } from 'lucide-react'
+import { Heart, Moon, Search, ShoppingBag, Sun } from 'lucide-react'
 
 interface NavbarProps {
   searchQuery: string
