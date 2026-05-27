@@ -139,9 +139,9 @@ const Home = () => {
 
       <main className="mx-auto max-w-7xl px-5 pb-24 pt-10 sm:px-6 lg:px-8">
         <div className="grid gap-8">
-          <section className="relative overflow-hidden rounded-[44px] border border-[rgba(255,255,255,0.88)] bg-[var(--surface)]/96 p-8 shadow-[0_40px_120px_-80px_rgba(183,152,145,0.45)] backdrop-blur-xl dark:border-[rgba(255,255,255,0.08)] dark:bg-[var(--panel)]/96">
-            <div className="pointer-events-none absolute -left-16 top-8 h-56 w-56 rounded-full bg-[#DCC6E0]/40 blur-3xl" />
-            <div className="pointer-events-none absolute right-0 top-1/2 h-72 w-72 rounded-full bg-[#F3C5B5]/30 blur-3xl" />
+          <section className="relative overflow-hidden rounded-[44px] border border-[rgba(255,255,255,0.88)] bg-[var(--surface)]/96 p-8 shadow-[0_40px_120px_-80px_rgba(183,152,145,0.45)] backdrop-blur-xl dark:border-[rgba(255,255,255,0.12)] dark:bg-[#071422]/96">
+            <div className="pointer-events-none absolute -left-16 top-8 h-56 w-56 rounded-full bg-[#DCC6E0]/40 blur-3xl dark:bg-[#24323f]/30" />
+            <div className="pointer-events-none absolute right-0 top-1/2 h-72 w-72 rounded-full bg-[#F3C5B5]/30 blur-3xl dark:bg-[#24323f]/20" />
             <div className="grid gap-8">
               <div className="space-y-6">
                 <div className="inline-flex items-center gap-3 rounded-full bg-[#fff3ee] px-4 py-2 text-xs uppercase tracking-[0.45em] text-[#9d6b7a] shadow-sm shadow-[#d8a7b1]/20 dark:bg-[#2b3347]/85 dark:text-[#dcc6e0]">
@@ -154,7 +154,7 @@ const Home = () => {
                   Crafted for a quiet luxury mood, ClickPick blends premium spacing, textured layers, and soft tones into a boutique product discovery experience.
                 </p>
                 <div className="grid gap-3 sm:grid-cols-3">
-                  <div className="rounded-[28px] border border-[#fadcd3] bg-[#fff3ee]/90 p-5 shadow-sm">
+                  <div className="rounded-[28px] border border-[#fadcd3] bg-[#fff3ee]/90 p-5 shadow-sm dark:bg-[#0f1724]/70 dark:border-[#24323f]/40">
                     <p className="text-sm uppercase tracking-[0.35em] text-[#9d6b7a]">Soft palette</p>
                     <p className="mt-3 text-base font-semibold text-[#39232b] dark:text-[#f7f3ef]">Dusty rose & muted peach</p>
                   </div>

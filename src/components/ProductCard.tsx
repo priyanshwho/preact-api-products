@@ -20,7 +20,7 @@ const ProductCard = ({ product, isFavorite, onToggleFavorite, onAddToCart, onQui
       whileHover={{ y: -10 }}
       className="group overflow-hidden rounded-[36px] border border-[rgba(255,255,255,0.9)] bg-[var(--panel)]/95 shadow-[0_30px_90px_-45px_rgba(183,152,145,0.35)] backdrop-blur-xl transition duration-300 hover:-translate-y-1 hover:shadow-[0_35px_100px_-45px_rgba(183,152,145,0.45)] dark:border-[rgba(255,255,255,0.08)] dark:bg-[#071422]/95"
     >
-      <div className="relative overflow-hidden rounded-[32px] bg-[#FBE7E1]/80">
+      <div className="relative overflow-hidden rounded-[32px] bg-[#FBE7E1]/80 dark:bg-[#071422]/40">
         <div className="pointer-events-none absolute left-6 top-6 h-24 w-24 rounded-full bg-[#DCC6E0]/40 blur-3xl dark:bg-[#24323f]/30" />
         <img
           src={imageSrc}
